@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            background-image: url("https://cdn.pixabay.com/photo/2015/01/15/16/17/hands-600497_640.jpg");
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+
+        }
+
+        .one {
+            background-color: rgba(266, 285, 285,0.4);
+            padding: 2%;
+            color: rgb(25, 6, 43);
+
+        }
+        input{
+            background-color: rgba(266, 285, 285,0.2);
+            margin-bottom: 2%;
+            
+
+        }
+        
+        .two{
+            color: aqua;
+        }
+        .three{
+            background-color: rgba(266, 285, 285,0.2);
+
+        }
+        .four{
+            background-color: rgba(266, 285, 285,0.2);
+            color: yellowgreen;
+        }
+    </style>
+</head>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    {% for message in messages %}
+     <h1 class="two"><center>{{ message }}</center></h1>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+
+
+<body>
+
+    <div class="container">
+        <h1><span class="four">Signup Details</span></h1>
+        <div class="one">
+            <form method="post" action="">
+                <label>First Name</label></br>
+                <input type="text" placeholder="enter first name" name="fname" /></br>
+                <label>Last Name</label></br>
+                <input type="text" placeholder="enter last name" name="lname" /></br>
+                <label>email</label></br>
+                <input type="text" placeholder="enter email adress" name="email" /></br>
+                <label>password</label></br>
+                <input type="password" placeholder="enter password" name="pwd" /></br>
+                <label>Confirm password</label></br>
+                <input type="password" placeholder="confirm password " name="cpwd" /></br>
+                <button class="three">submit</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>

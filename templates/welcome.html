@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+        h1{
+            text-align: center;
+            color:saddlebrown;
+            margin-top: 20%;
+            font-weight: bold;
+        }
+
+        body{
+            background-color: springgreen;
+        }
+
+        .two{
+            background-color: tomato;
+            height: 50px;
+            width: 70px;
+            margin-right: 20px;
+            border-radius: 20px;
+
+        }
+        .three{
+            background-color: teal;
+            height: 50px;
+            width: 70px;
+            margin-right: 20px;
+            border-radius: 20px;
+        }
+        .one{
+           
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Welcome To Student Personal Record Management</h1>
+    <div class="one">
+        
+
+        <button class="two"><a href="{{url_for('register')}}">Signup</button></a><br />
+        <button class="three"><a href="{{url_for('login')}}">Login</a></button>
+    </div>
+</body>
+
+</html>
